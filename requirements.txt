@@ -6,4 +6,4 @@ Pillow
 torch
 torchvision
 torchaudio
-transformers==3.5.0
+transformers==4.8.0
