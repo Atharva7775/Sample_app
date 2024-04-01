@@ -2,4 +2,5 @@ streamlit
 PyMuPDF
 frontend
 Pillow
+torch
 transformers
