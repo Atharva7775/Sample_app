@@ -1,6 +1,4 @@
 streamlit
-python3
-PyMuPDF
 fitz
 Pillow
 transformers
