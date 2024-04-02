@@ -56,13 +56,10 @@ def main():
     
     with st.sidebar:
         st.header('About App')
-        # st.header('Smart Document Recognition: Instantly Identify Uploaded Documents')
         expander = st.expander("Smart Document Recognition: \n\n Instantly Identify Uploaded Documents: ")
         expander.write('Empower your document management process with Smart Document Recognition. This advanced feature swiftly identifies the type of document you upload, making document handling effortless and efficient.')
-        # st.header('How It Works: ')
         expander = st.expander("How It Works:")
         expander.write('Upload Your Document: Select the document you wish to process using the provided file upload button. \n\n Intelligent Analysis: Our system employs cutting-edge technology to analyze the documents structure, layout, and content. \n\n Automatic Identification: Based on the analysis, Smart Document Recognition accurately identifies the document type, whether its an identification document, real estate document, 401k document or any other document format. \n\n Streamlined Processing: With the document type identified, our platform can seamlessly route it to the appropriate workflow or apply predefined actions, saving you valuable time and effort.')
-        # st.header('What Problem it Solves?')
         expander = st.expander("Configuration")
         expander.write("""
                     Let's Classify your Document according to these
