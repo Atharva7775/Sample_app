@@ -95,7 +95,6 @@ def main():
         else:    
             img2text(uploaded_file)
         
-st.cache_resource
 def pdf_to_img(uploaded_file):
     # Open the PDF file
     pdf_data = uploaded_file.read()
@@ -116,7 +115,7 @@ def pdf_to_img(uploaded_file):
     image = Image.open(io.BytesIO(img_bytes))
     
     return image
-st.cache_resource    
+  
 def create_static_directory():
     directory = 'static/'
     if not os.path.exists(directory):
