@@ -6,7 +6,7 @@ import os
 from transformers import CLIPProcessor, CLIPModel
 CLIPProcessor.safety_checker = None
 
-@st.cache(allow_output_mutation=True)
+st.cache_resource
 def img2text(uploaded_file):
     model = CLIPModel.from_pretrained("openai/clip-vit-large-patch14-336")
     processor = CLIPProcessor.from_pretrained("openai/clip-vit-large-patch14-336")
