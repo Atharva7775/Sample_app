@@ -114,15 +114,16 @@ def pdf_to_img(uploaded_file):
     image = Image.open(io.BytesIO(img_bytes))
     
     return image
-# def create_static_directory():
-#     directory = 'static/'
-#     if not os.path.exists(directory):
-#         os.makedirs(directory)
-#         print(f"Directory '{directory}' created successfully.")
-#     else:
-#         print(f"Directory '{directory}' already exists.")
+    
+def create_static_directory():
+    directory = 'static/'
+    if not os.path.exists(directory):
+        os.makedirs(directory)
+        print(f"Directory '{directory}' created successfully.")
+    else:
+        print(f"Directory '{directory}' already exists.")
 
-# create_static_directory()
+create_static_directory()
          
         
 
