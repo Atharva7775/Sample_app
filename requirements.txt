@@ -5,5 +5,4 @@ frontend
 Pillow
 torch
 torchvision
-torchaudio
 transformers==4.8.0
