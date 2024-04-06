@@ -50,9 +50,18 @@ def img2text(uploaded_file):
     elif index_of_max == 8:
         message = "Your documents have been uploaded successfully. Thanks for submitting your Document."
 
-    styled_message = f"<div style='font-size:20px;font-weight:bold;border: 2px solid Green;padding:10px;'>{message}</div>"
+    styled_message = f"<div style='font-size:28px;font-weight:bold;border: 2px solid Green;padding:10px;'>{message}</div>"
     st.markdown(styled_message, unsafe_allow_html=True)
 
+    st.subheader("The Probabilites are as follows")
+    st.write("Passport - ", flat_probs[0])
+    st.write("Driver License - ", flat_probs[1])
+    st.write("Green Card - ", flat_probs[2])
+    st.write("401K Statement - ", flat_probs[3])
+    st.write("Will & POAs Document - ", flat_probs[4])
+    st.write("Life Insurance Policy - ", flat_probs[5])
+    st.write("W2 Form - ", flat_probs[6])
+    st.write("HSA Statement - ", flat_probs[7])
 
 def main():
     st.set_page_config(page_title='Famiology.docdetector', page_icon='./favicon (2).ico')
@@ -88,11 +97,13 @@ def main():
     if uploaded_file is not None:
         if uploaded_file.type == 'application/pdf':
             uploaded_file = pdf_to_img(uploaded_file)
+            st.image(uploaded_file, caption='Uploaded Document.', use_column_width=True)
             # st.image(uploaded_file, caption='Uploaded Image.', use_column_width=True)
             # scenario1 = img2text(uploaded_file)
             img2text(uploaded_file)
             
         else:    
+            st.image(uploaded_file, caption='Uploaded Document.', use_column_width=True)
             img2text(uploaded_file)
         
 def pdf_to_img(uploaded_file):
