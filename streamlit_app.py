@@ -52,7 +52,7 @@ def img2text(uploaded_file):
 
     styled_message = f"<div style='font-size:28px;font-weight:bold;border: 2px solid Green;padding:10px;'>{message}</div>"
     st.markdown(styled_message, unsafe_allow_html=True)
-
+    st.write("Hellooooooo")
     st.subheader("The Probabilites are as follows")
     st.write("Passport - ", flat_probs[0])
     st.write("Driver License - ", flat_probs[1])
