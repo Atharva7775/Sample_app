@@ -6,7 +6,7 @@ import os
 from transformers import CLIPProcessor, CLIPModel
 CLIPProcessor.safety_checker = None
 
-@st.cache(allow_output_mutation=True)
+st.cache_resource
 def load_clip_model_processor():
     model = CLIPModel.from_pretrained("openai/clip-vit-large-patch14")
     processor = CLIPProcessor.from_pretrained("openai/clip-vit-large-patch14")
