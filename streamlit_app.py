@@ -8,8 +8,8 @@ CLIPProcessor.safety_checker = None
 
 
 def load_clip_model_processor():
-    model = CLIPModel.from_pretrained("openai/clip-vit-large-patch14")
-    processor = CLIPProcessor.from_pretrained("openai/clip-vit-large-patch14")
+    model = CLIPModel.from_pretrained("openai/clip-vit-large-patch14-336")
+    processor = CLIPProcessor.from_pretrained("openai/clip-vit-large-patch14-336")
     return model, processor
     
 
