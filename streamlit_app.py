@@ -290,7 +290,7 @@ def img2text(uploaded_file, options):
     else:
         image = Image.open(uploaded_file)
 
-    array = ["Passport", "Driver License", "Green Card", "401K-statement", "Last-will-and-testament", "life-insurance", "W2-form", "f8889_HSA", "1040-Tax-Return"]
+    array = ["Passport", "Driver License", "Green Card", "401K-statement", "Last-will-and-testament", "life-insurance", "W2-form", "f8889_HSA"]
     inputs = processor(text=array, images=image, return_tensors="pt", padding=True)
 
     outputs = model(**inputs)
@@ -317,8 +317,8 @@ def img2text(uploaded_file, options):
         message = "Your documents have been uploaded successfully. Thanks for submitting your W2 Form."
     elif index_of_max == 7:
         message = "Your documents have been uploaded successfully. Thanks for submitting your HSA Statement."
-    elif index_of_max == 8:
-        message = "Your documents have been uploaded successfully. Thanks for submitting your Income Statement Document."
+    # elif index_of_max == 8:
+    #     message = "Your documents have been uploaded successfully. Thanks for submitting your Income Statement Document."
 
     styled_message = f"<div style='font-size:28px;font-weight:bold;border: 2px solid Green;padding:10px;'>{message}</div>"
     st.markdown(styled_message, unsafe_allow_html=True)
@@ -343,8 +343,8 @@ def img2text(uploaded_file, options):
         st.write("W2 Form - ", flat_probs[6])
     if "f8889_HSA" in options:
         st.write("HSA Statement - ", flat_probs[7])
-    if "Income-Statement" in options:
-        st.write("Income-Statement ", flat_probs[8])
+    # if "Income-Statement" in options:
+    #     st.write("Income-Statement ", flat_probs[8])
     # st.write("Passport - ",flat_probs[0], "\nDriver License - ", flat_probs[1], "\nGreen Card - ", flat_probs[2], "401K Statement - ", flat_probs[3], "Will & POAs Document - ", flat_probs[4], "Life Insurance Policy - ", flat_probs[1], "W2 Form - ", flat_probs[1], "HSA Statement - ", flat_probs[1])
     # # st.success(message)
     # st.write("We'll take care of the rest.")
